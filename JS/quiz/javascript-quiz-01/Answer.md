@@ -72,6 +72,9 @@ function checkAge(age) {
         return "Too young";
     }
 }
+
+// checkAge = age => age >= 18 ? "Old enough" : "Too young";
+
 ```
 
 ---
@@ -91,14 +94,22 @@ function repdigit(n) {
 //  of n by dividing by 10
 //  and rounding down.
 //  Compare ones and tens digits.
-    let tensDigit = Math.floor(n / 10);
-    let onesDigit = n - tensDigit;
-    if (tensDigit == onesDigit) {
-        return 'Repdigit!';
-    } else {
-        return 'No Repdigit!';
+    if ( n >= 10 && n < 100 ){
+        let tensDigit = Math.floor(n / 10);
+        let onesDigit = n - tensDigit;
+        if (tensDigit == onesDigit) {
+            return 'Repdigit!';
+        } else {
+            return 'No Repdigit!';
+        }
     }
 }
+
+// const repdigit = (n) => {
+//     const numberString = n.toString();
+//     return numberString[0] === numberString[1] ? 'Repdigit!' : 'No Repdigit!';
+// }
+
 ```
  
 ---
@@ -165,7 +176,7 @@ function login() {
             alert('Wrong password');
         };
     } else if (userName == null || userName.length == 0) {
-        alert('Canceled');
+        alert('Cancelled');
     } else {
         alert('I don\'t know you');
     };
