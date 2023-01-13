@@ -15,7 +15,7 @@ greeting();
 // D: undefined and ReferenceError
 
 // Ans: D
-// Short explanation: The variable declared by "var" behaves as hoisting, so the variable can be used before it has been declared, but the default value "undefined" is shown. In the other side, the variable declared by "let" can't be used before it is declared, it cause reference error.
+// Short explanation: The variable declared by "var" behaves as hoisting, so the variable can be used before it has been declared, but the default value "undefined" is shown in this case, because the declaration is executed before using automatically but the value is assigned at the point of the sentence. In the other side, the variable declared by "let" can't be used before it is declared, it cause reference error.
 
 ```
 ###### Question 2: What's the output?
@@ -29,7 +29,7 @@ greeting();
 // C: false and false
 
 // Ans: A
-// Short explanation: These output shows results by calculating or compared to a default value. "+true" means "default value 0 plus true (1) = 1", '!"Lydia"' means 'the result comparing "undefined" and "Lydia"'.
+// Short explanation: These output shows results by calculating or compared to a default value. "+true" means "default value 0 plus true (1) = 1", '!"Lydia"' means 'the result comparing "undefined" to "Lydia"'.
 
 ```
 ###### Question 3: What's the output?
@@ -81,7 +81,7 @@ console.log(number);
 // D: true true false
 
 // Ans: B
-// Short explanation: "!!" means that "not" is repeated twice, which means the result doesn't change from original value. 'null' and '""' is false, '1' is true.
+// Short explanation: "!!" means that "not" is repeated twice, which means the result doesn't change from original value. These original values are 'null' and '""' is false, '1' is true.
 
 ```
 ###### Question 6: What's the output?
@@ -95,7 +95,7 @@ console.log(3 + 4 + "5");
 // D: "12"
 
 // Ans: B
-// Short explanation: The sentence is read from the start, so firstly "3 + 4" is executed, which means 7. Then '7 + "5"' is executed, but "5" is String type, so these operands are deal with String, which merge 2 values as String.
+// Short explanation: The sentence is read from the start, so firstly "3 + 4" is executed, which means 7 because 2 characters are number and they are calculated as number. Then '7 + "5"' is executed, but "5" is String type, so these operands are deal with String, which merge 2 values as String.
 
 ```
 ###### Question 7: What's the value of num?
